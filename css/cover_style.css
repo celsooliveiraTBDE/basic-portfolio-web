@@ -1,0 +1,149 @@
+/* #main { 
+    background: black url('../assets/images/cover2.jpg') center / cover;
+    /* The image used */
+} */
+@media (max-width: 1024px) { #main { background: black url(assets/images/hero-2.jpg) center / cover; } }
+@media (max-width:  768px) { #main { background: black url(assets/images/hero-3.jpg) center / cover; } } 
+
+#BCN { 
+    background: black url('assets/images/dr-stravinsky-1.jpg') center / cover;
+    /* The image used */
+    height: 821px; 
+}
+
+#LAX { 
+    background: black url('assets/images/birdy.jpg') center / cover;
+    /* The image used */
+    height: 821px; 
+
+}
+#MOSCOW { 
+    background: black url('assets/images/insider.jpg') center / cover;
+    /* The image used */
+    height: 821px; 
+
+}
+#SPB { 
+    background: black url('assets/images/apotheke.jpg') center / cover;
+    /* The image used */
+    height: 821px; 
+
+}
+.video-banner{
+    background: black; 
+
+}
+
+.level-item{
+background: black
+; 
+border: 10px solid black; 
+}
+
+.grid{
+    margin: 0px, auto, auto, 0px; 
+}
+
+.title{
+    color: white; 
+}
+.is-horizontal-center {
+    justify-content: center;
+  }
+
+.button { margin: 0 auto; display: block }
+
+
+@font-face {
+    font-family: myWCFont;
+    src: url(../assets/fonts/DushaWC18.ttf);
+}   
+h1, h2, h3{
+    font-family: myWCFont;
+}
+.center, .center-column, .top, .right, .bottom, .left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+#a {grid-area: a;}
+#b {grid-area: b;}
+#c {grid-area: c;}
+#d {grid-area: d;}
+#e {grid-area: e;}
+
+#grid {
+    display: grid;
+    grid-template-areas: "a a a a"
+                         "b c d e";
+                         
+
+grid-row-gap: 1rem;
+}
+@media (max-width: 512px){
+    #grid {
+        grid-template-areas: "a a a"
+                             "b c d"
+                             "e e e"
+
+    }                   
+}
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.desktop {
+		display: none;
+	}
+}
+
+.box {
+    background-color: #218D9B;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .transform {
+    -webkit-transition: all 2s ease;  
+    -moz-transition: all 2s ease;  
+    -o-transition: all 2s ease;  
+    -ms-transition: all 2s ease;  
+    transition: all 2s ease;
+  }
+  
+  .transform-active {
+    background-color: #45CEE0;
+    height: 200px;
+    width: 200px;
+  }
+    
+
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+video {
+	height: 25vh;
+}
+#bgvid {
+    position: absolute; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: 0;
+    background: transparent url(poster_image.jpg) no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CELSO OLIVEIRA: Full Stack Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/cover_style.css" />
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/tbdelogo.jpg" />
+
+    <body>
+
+        <section class="hero is-dark is-fullheight" id="main">
+            <div class="hero-head">
+                <div class="columns is-mobile is-marginless heading has-text-weight-bold ">
+                    <div class="column left">
+                        <figure class="navbar-item image">
+                            <a href="http://www.instagram.com/thebestdrinkever">
+                                <img src="assets/images/tbdelogo.jpg" style="width: 2.15rem; height: 5rem;">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="column center desktop">
+                        <a class="navbar-item has-text-white" href="#BCN">HOME </a>
+                        <a class="navbar-item has-text-white" href="#">PROJECTS </a>
+                        <a class="navbar-item has-text-white" href="#">PORTFOLIO </a>
+                        <a class="navbar-item has-text-white" href="#">BLOG</a>
+                        <a class="navbar-item has-text-white" href="#">CONTENT </a>
+                    </div>
+                    <div class="column right">
+
+                        <p class="navbar-item desktop has-text-white desktop">ABOUT </p>
+                        <p class="navbar-item desktop has-text-white desktop">CONTACT</p>
+                        <a role="button" class="navbar-burger nav-toggle" id="nav-toggle" aria-label="menu" aria-expanded="false">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-1 s-spaced has-text-centered">
+                        CELSO OLIVEIRA
+                    </h1>
+                    <h2 class="subtitle is-3 has-text-centered has-text-danger">
+                        FULL STACK WEB DEVELOPER, CONTENT CREATOR, DRINKS EXTRAORDINAIRE
+                    </h2>
+
+                </div>
+            </div>
+            <main class="hero-foot center" style="padding: 2rem;">
+                <div id="grid" style="width: 768px;">
+                    <div id="a" class="center-column">
+                        <p class="has-text-centered has-text-white">
+                            ​Sit Back, Relax and Enjoy a Round on the House
+                        </p>
+                    </div>
+
+                    <div id="b" class="center-column">
+                        <a class="title has-text-white" href="https://twitter.com/celso21">
+                            <i class="fas fa-bullhorn has-text-grey-light" style="width: 0.75em; height: 0.75em;"></i>
+                        </a>
+                        <p class="subtitle has-text-white is-7">Twitter</p>
+                    </div>
+
+                    <div id="c" class="center-column" style="border-left: 1px solid gray;">
+                        <a class="title has-text-white">
+                            <i class="fas fa-building has-text-grey-light" href="https://twitter.com/celso21" style="width: 0.75em; height: 0.75em;">
+                            </i>
+                        </a>
+                        <p class="subtitle is-7 has-text-white"> LinkedIn</p>
+                    </div>
+
+                    <div id="d" class="center-column" style="border-left: 1px solid gray;">
+                        <p class="title has-text-white">
+                            <i class="fas fa-envelope has-text-grey-light" style="width: 0.75em; height: 0.75em;">
+                            </i>
+                            </span>
+                            <span class="is-size-5"></span>
+                        </p>
+                        <p class="subtitle is-7 has-text-white"> Instagram</p>
+                    </div>
+                    <div id="e" class="center-column">
+                        <a class="button is-danger is-inverted is-rounded is-outlined has-text-weight-bold" style="width: 100%; border: 0.15em solid white;"
+                            id='my-button'>
+                            VIEW MY WORK
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </body>
+    <div class="modal">
+        <div class="modal-background is-dark"></div>
+        <div class="modal-card is-dark">
+            <header class="modal-card-head is-danger">
+                <p class="modal-card-title">#BEBABONITO</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="container is-dark has-text-white">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TSL4WC-6tTo?autoplay=0&amp;rel=0&amp;controls=0&amp;showinfo=0"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <footer class="modal-card-foot">
+                    <button class="button" id="cancel">Close</button>
+                </footer>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+
+            $("#my-button").click(function () {
+                // $('.hero-foot').toggleClass('transform-active');
+                $('.modal').addClass('is-active');
+            });
+            $("#cancel").click(function () {
+                // $('.hero-foot').toggleClass('transform-active');
+                $('.modal').removeClass('is-active');
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+
+                // Get all "navbar-burger" elements
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(
+                    '.navbar-burger'), 0);
+
+                // Check if there are any navbar burgers
+                if ($navbarBurgers.length > 0) {
+
+                    // Add a click event on each of them
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            // Get the target from the "data-target" attribute
+
+
+                            var $toggle = $('#nav-toggle');
+                            var $menu = $('#nav-menu');
+
+                            $toggle.click(function () {
+                                $(this).toggleClass('is-active');
+                                $menu.toggleClass('is-active');
+                            });
+                        });
+                    });
+
+                }
+            });
+
+        })
+    </script>
+
+</html>
